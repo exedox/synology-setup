@@ -29,6 +29,6 @@ This repo is referencing what I did to get things working on my DS918+. It'll be
 
       c. Use [this](https://github.com/mrikirill/SynologyDDNSCloudflareMultidomain) to add cloudflare to synology DDNS options. Make following changes
      
-         - Use [external ip](https://whatismyipaddress.com/) for ipaddress
+         * Use [external ip](https://whatismyipaddress.com/) for ipaddress
      
-         - In the hostname section I only included the domain.com
+         * In the hostname section I only included the domain.com
