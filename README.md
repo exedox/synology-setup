@@ -44,4 +44,5 @@ This repo is referencing what I did to get things working on my DS918+. It'll be
           ```
           dns_cloudflare_email = youremailaddress@protonmail.com
           dns_cloudflare_api_key = yourglobalapikey
-           ```
+          ```
+      c. sfs
