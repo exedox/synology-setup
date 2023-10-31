@@ -38,11 +38,13 @@ This repo is referencing what I did to get things working on my DS918+. It'll be
         * Can set things up proxied for subdomains after obtaining SSL, but leave plex or emby as dns only because if you orange them, it breaks the rules.  Keep proxy greyed until SSL is created.
           [image](https://github.com/exedox/synology-setup/blob/main/images/arecord.PNG)
 
-   4.  Create Wildcard SSL Certificate for subdomains
+   4.  Create Wildcard SSL Certificate for subdomain
+      
       a. Create certbot using [linuxserver docker](https://docs.linuxserver.io/general/swag/#create-container-via-dns-validation-with-a-wildcard-cert), no need to expose ports.
+      
       b. Edit dns-conf/cloudflare.ini:
-          ```
-          dns_cloudflare_email = youremailaddress@protonmail.com
-          dns_cloudflare_api_key = yourglobalapikey
-          ```
-      c. sfs
+      
+      ```
+      dns_cloudflare_email = youremailaddress@protonmail.com
+      dns_cloudflare_api_key = yourglobalapikey
+      ```
