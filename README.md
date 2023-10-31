@@ -5,6 +5,7 @@ This repo is referencing what I did to get things working on my DS918+. It'll be
 ## Table of Contents
 * [Prerequisites](#Prerequisites)
 * [Reverse Proxy,Domain,Subdomains](#Reverse-Proxy,Domain,Subdomains)
+* [Troubleshooting](#Troubleshooting)
 
 ## Prerequisites
 
@@ -29,6 +30,18 @@ This repo is referencing what I did to get things working on my DS918+. It'll be
 
       c. Use [this](https://github.com/mrikirill/SynologyDDNSCloudflareMultidomain) to add cloudflare to synology DDNS options. Make following changes
      
-         * Use [external ip](https://whatismyipaddress.com/) for ipaddress
+        * Under DNS settings, instead of device ip, use [external ip](https://whatismyipaddress.com/) for ipaddress
      
-         * In the hostname section I only included the domain.com
+        * When editing DDNS.  In the hostname section only included the domain.com. We will create a wildcard because that's more convenient than creating several individual SSL certificates.
+             ![image](https://github.com/exedox/synology-setup/blob/main/images/hostname.PNG)
+     d. Set up A Record and CName on cloudflare:
+        * Can set things up proxied for subdomains after obtaining SSL, but leave plex or emby as dns only because if you orange them, it breaks the rules.  Keep proxy greyed until SSL is created.
+          [image](https://github.com/exedox/synology-setup/blob/main/images/arecord.PNG)
+
+   4.  Create Wildcard SSL Certificate for subdomains
+      a. Create certbot using [linuxserver docker](https://docs.linuxserver.io/general/swag/#create-container-via-dns-validation-with-a-wildcard-cert), no need to expose ports.
+      b. Edit dns-conf/cloudflare.ini:
+          ```
+          dns_cloudflare_email = youremailaddress@protonmail.com
+          dns_cloudflare_api_key = yourglobalapikey
+           ```
