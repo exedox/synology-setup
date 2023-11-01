@@ -1,0 +1,20 @@
+version: "2.1"
+services:
+  swag:
+    image: lscr.io/linuxserver/swag
+    container_name: name
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=1026
+      - PGID=100
+      - TZ=location
+      - URL=domain
+      - SUBDOMAINS=wildcard
+      - VALIDATION=dns
+      - DNSPLUGIN=cloudflare
+      - EMAIL=email
+      - DHLEVEL=2048
+    volumes:
+      - /volume1/docker/letsencrypt:/config
+    restart: unless-stopped
