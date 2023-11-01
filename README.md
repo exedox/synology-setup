@@ -4,7 +4,7 @@ This repo is referencing what I did to get things working on my DS918+. It'll be
 
 ## Table of Contents
 * [Prerequisites](#Prerequisites)
-* [Reverse Proxy,Domain,Subdomains](#Reverse-Proxy,Domain,Subdomains)
+* [Reverse Proxy,Domain,Subdomains](https://github.com/exedox/synology-setup/blob/main/Reverse%20Proxy%2CDomain%2CSubdomain/setup.md)
 * [Troubleshooting](#Troubleshooting)
 
 ## Prerequisites
@@ -14,4 +14,11 @@ This repo is referencing what I did to get things working on my DS918+. It'll be
 * Commandline access to NAS
 * Domain name
 
+## Troubleshooting
 
+* If swag container for wildcard gets a failed to connect error.
+   1. Try to ping it to see if there's network connection from connector:
+    ```
+    curl -i https://api.zerossl.com/acme/eab-credentials-email --data email
+    ```
+  2. Likely a network issue, turn off pi-hole and see firewall rules of router and synology.
