@@ -1,4 +1,4 @@
-![image](https://github.com/exedox/synology-setup/assets/55308770/1d8c4e69-33f9-4d80-a495-233f78293c73);.# Synology Setup
+## Synology Setup
 
 This repo is referencing what I did to get things working on my DS918+. It'll be about setting up the network and docker stuff.  I'll reference other guides I found useful.
 
