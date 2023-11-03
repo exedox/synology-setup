@@ -5,7 +5,7 @@ This repo is referencing what I did to get things working on my DS918+. It'll be
 ## Table of Contents
 * [Prerequisites](#Prerequisites)
 * [Reverse Proxy,Domain,Subdomains](https://github.com/exedox/synology-setup/blob/main/Reverse%20Proxy%2CDomain%2CSubdomain/setup.md)
-* [Dockers Used][#Dockers Used)
+* [Dockers Used](#Dockers-Used)
 * [Troubleshooting](#Troubleshooting)
 
 ## Prerequisites
