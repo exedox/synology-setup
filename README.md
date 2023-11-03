@@ -1,10 +1,11 @@
-# Synology Setup
+![image](https://github.com/exedox/synology-setup/assets/55308770/1d8c4e69-33f9-4d80-a495-233f78293c73);.# Synology Setup
 
 This repo is referencing what I did to get things working on my DS918+. It'll be about setting up the network and docker stuff.  I'll reference other guides I found useful.
 
 ## Table of Contents
 * [Prerequisites](#Prerequisites)
 * [Reverse Proxy,Domain,Subdomains](https://github.com/exedox/synology-setup/blob/main/Reverse%20Proxy%2CDomain%2CSubdomain/setup.md)
+* [Dockers Used][#Dockers Used)
 * [Troubleshooting](#Troubleshooting)
 
 ## Prerequisites
@@ -13,6 +14,12 @@ This repo is referencing what I did to get things working on my DS918+. It'll be
 * Ports 443 and 80 forwarded
 * Commandline access to NAS
 * Domain name
+
+## Dockers Used
+
+*  Media: Sonarr, Overseer, Requestrr, Prowlarr
+*  Utility: Portainerr, Home Assistant, Bitwarden
+*  Downloader: Qbittorrent
 
 ## Troubleshooting
 
